@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Image} from 'react-native';
 import {Card as RNECard, ListItem, Button, Text} from 'react-native-elements';
 import {useUserContext} from '../contexts/UserContext';
 
@@ -19,6 +19,7 @@ const Profile = ({navigate}: {navigate: (route: string) => void}) => {
   return (
     <View style={styles.container}>
       <Card>
+        <Image source={require('../../screenshots/profile.png')} style={styles.avatar} />
         <Card.Title>{user.name ?? user.username}</Card.Title>
         <Card.Divider />
         <ListItem bottomDivider>
@@ -43,6 +44,7 @@ const Profile = ({navigate}: {navigate: (route: string) => void}) => {
 const styles = StyleSheet.create({
   container: {flex: 1, padding: 16},
   center: {flex: 1, alignItems: 'center', justifyContent: 'center'},
+  avatar: {width: 120, height: 120, borderRadius: 8, alignSelf: 'center', marginBottom: 12},
 });
 
 export default Profile;
