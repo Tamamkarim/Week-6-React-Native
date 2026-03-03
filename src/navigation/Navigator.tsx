@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, TouchableOpacity, Text} from 'react-native';
-import Profile from '../views/Profile.tsx';
-import MyFiles from '../views/MyFiles.tsx';
+import Profile from '../views/Profile';
+import MyFiles from '../views/MyFiles';
 import Upload from '../views/Upload.tsx';
-import {UserProvider} from '../contexts/UserContext.tsx';
+import {UserProvider} from '../contexts/UserContext';
 import {UpdateProvider} from '../contexts/UpdateContext.tsx';
 
 const Navigator = () => {

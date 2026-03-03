@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, FlatList, StyleSheet} from 'react-native';
-import {Card as RNECard, ListItem, Button, Text} from 'react-native-elements';
+import {Card as RNECard, ListItem, Button} from 'react-native-elements';
 
 const Card: any = (props: any) => <RNECard {...props} />;
 
