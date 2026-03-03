@@ -1,0 +1,27 @@
+{
+  "name": "week-6-react-native",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "expo": "*",
+    "expo-video": "^55.0.10",
+    "react": "^19.2.0",
+    "react-native": "^0.83.2"
+  },
+  "devDependencies": {
+    "@types/react": "*",
+    "@types/react-native": "*",
+    "eslint": "*",
+    "eslint-config-expo": "*",
+    "prettier": "*",
+    "typescript": "*"
+  }
+}
