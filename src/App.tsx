@@ -1,31 +1,14 @@
 import React from 'react';
-import { SafeAreaView, Text, StyleSheet, Image } from 'react-native';
+import { SafeAreaView, Text, Image } from 'react-native';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 export default function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <Image
-        source={require('../assets/icon.png')} // غيّر الاسم لو حاب تستخدم صورة ثانية
-        style={{ width: 100, height: 100 }}
-      />
-      <Text style={styles.text}>Hello, World!</Text>
-    </SafeAreaView>
+    <SafeAreaProvider>
+      <SafeAreaView style={{flex: 1, alignItems: 'center', justifyContent: 'center', backgroundColor: '#ffffff'}}>
+        <Image source={require('../assets/icon.png')} style={{ width: 100, height: 100 }} />
+        <Text style={{ fontSize: 18, fontWeight: '600' }}>Hello, World!</Text>
+      </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: '#ffffff',
-  },
-  text: {
-    fontSize: 18,
-    fontWeight: '600',
-  },
-  image: {
-    width: 200,
-    height: 200,
-  },
-});
