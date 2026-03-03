@@ -1,6 +1,9 @@
 import React from 'react';
 import {View, StyleSheet} from 'react-native';
-import {Card, ListItem, Button, Text} from 'react-native-elements';
+import {Card as RNECard, ListItem, Button, Text} from 'react-native-elements';
+
+// RNE Card typing can be strict in some setups; provide a thin any-typed wrapper
+const Card: any = (props: any) => <RNECard {...props} />;
 import {useUserContext} from '../contexts/UserContext';
 
 const Profile = ({navigate}: {navigate: (route: string) => void}) => {
